@@ -53,15 +53,15 @@ public class StudentController {
 	}
 
 	@RequestMapping(value = "/delete/{id}", method = RequestMethod.DELETE)
-	public ResponseEntity<Student> deleteStudent(@PathVariable int id) {
+	public ResponseEntity<String> deleteStudent(@PathVariable int id) {
 		
 		Boolean isStudentExists = studentService.isStudentRecordExists(id);
 
 		if (isStudentExists) {
 			studentService.deleteStudent(id);
-			return new ResponseEntity("Student record " + id + " Deleted Succesfully", HttpStatus.OK);
+			return new ResponseEntity<String>("Student record " + id + " Deleted Succesfully", HttpStatus.OK);
 		} else {
-			return new ResponseEntity("Student record " + id + " Not Found!", HttpStatus.NOT_FOUND);
+			return new ResponseEntity<String>("Student record " + id + " Not Found!", HttpStatus.NOT_FOUND);
 		}
 
 		
