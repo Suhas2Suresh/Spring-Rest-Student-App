@@ -42,7 +42,7 @@ public class StudentServiceImpl implements StudentService {
 
 	@Override
 	public Boolean isStudentRecordExists(int id) {
-		System.out.println(""this is to test git );
+
 		return studentRepository.existsById(id);
 	}
 
