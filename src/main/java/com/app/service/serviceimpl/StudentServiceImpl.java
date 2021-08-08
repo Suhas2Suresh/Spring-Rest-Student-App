@@ -36,7 +36,7 @@ public class StudentServiceImpl implements StudentService {
 	@Override
 	@Transactional(propagation = Propagation.NEVER)
 	public List<Student> getAllStudents()  {
-		
+		System.out.println("this is to test git");
 		return (List<Student>) studentRepository.findAll();
 	}
 
