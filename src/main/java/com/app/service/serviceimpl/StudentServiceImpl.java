@@ -36,7 +36,7 @@ public class StudentServiceImpl implements StudentService {
 	@Override
 	@Transactional(propagation = Propagation.NEVER)
 	public List<Student> getAllStudents()  {
-		
+		667fa4922a04969abacdd81017f2d49f50d8ac68
 		return (List<Student>) studentRepository.findAll();
 	}
 
